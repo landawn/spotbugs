@@ -486,12 +486,12 @@ public class AnalysisContext implements AutoCloseable {
         try {
             ClassContext classContext = analysisCache.getClassAnalysis(ClassContext.class, desc);
             ClassData classData = analysisCache.getClassAnalysis(ClassData.class, desc);
-            if (classData.getData().length > 1000000) {
+            if (classData.getData().length > 10000000) {
                 return true;
             }
             try {
                 JavaClass javaClass = classContext.getJavaClass();
-                if (javaClass.getMethods().length > 1000) {
+                if (javaClass.getMethods().length > 10000) {
                     return true;
                 }
             } catch (RuntimeException e) {
