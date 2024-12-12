@@ -5,15 +5,15 @@ apply from: "$rootDir/gradle/maven.gradle"
 // This library is consumed by lot of clients
 // It should be compiled with lowest possible JLS level
 tasks.named('compileJava', JavaCompile).configure {
-  sourceCompatibility = 1.5
-  targetCompatibility = 1.5
+  sourceCompatibility = 17
+  targetCompatibility = 17
 }
 
 eclipse {
   jdt {
-    sourceCompatibility = 1.5
-    targetCompatibility = 1.5
-    javaRuntimeName = "J2SE-1.5"
+    sourceCompatibility = 17
+    targetCompatibility = 17
+    javaRuntimeName = "JavaSE-17"
   }
 }
 
